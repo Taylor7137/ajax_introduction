@@ -1,6 +1,9 @@
-$(document).ready(function(){
-  var baseUrl = 'https://api.forecast.io/';
+var weatherData = null;
 
+$(document).ready(function(){
+  var baseUrl = 'https://api.forecast.io/forecast/';
+  	
+	
   $('#get-weather').on('click', getWeather);
 
 
@@ -24,6 +27,7 @@ $(document).ready(function(){
 
 
   function successHandler(data){
+	 weatherData = data;
     $('#output').text(JSON.stringify(data));
     console.log(data);
   }
