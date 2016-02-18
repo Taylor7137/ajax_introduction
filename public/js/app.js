@@ -2,7 +2,7 @@ var weatherData = null;
 
 $(document).ready(function(){
   var baseUrl = 'https://api.forecast.io/forecast/';
-  	
+  var name = taylor;
 	
   $('#get-weather').on('click', getWeather);
 
